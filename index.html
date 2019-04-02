@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> Fast Food Restrooms </title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  </head>
+  <body>
+    <h1> Fast Food Restrooms </h1>
+    <h2> Rank Fast Food Restrooms for Needy Travellers Across the US! </h2>
+
+    <h3> Write a Review </h3>
+    <div id="mainForm">
+      <form id="reviewForm" action="newReview.php" method="POST">
+        <label for = "restaurantName"> Restaurant Name </label>
+          <input type = "text" name = "restaurantName">
+          <br/>
+        <label for = "addressOne"> Address Line 1 </label>
+          <input type = "text" name = "addressOne">
+          <br/>
+        <label for = "addressTwo"> Address Line 2 </label>
+          <input type = "text" name = "addressTwo">
+          <br/>
+        <label for = "city"> City </label>
+          <input type = "text" name = "city">
+          <br/>
+        <label for = "state"> State </label>
+          <input type = "text" name = "state">
+          <br/>
+        <label for = "reviewBox"> Please write your review here: </label>
+        <br/>
+          <textarea id="reviewTextBox" name = "reviewBox"></textarea>
+          <br/>
+        <h3> Rate how many toilets you would give this restaurant: </h3>
+        <div id="toiletRatings">
+          <label for = "oneToilet"> <img class = "toiletIcons" src="toilet.png" alt="Toilet Rating Icon"></label>
+            <input type = "radio" id="oneToilet" name="toilets">
+          <label for = "twoToilet"> <img class = "toiletIcons" src="toilet.png" alt="Toilet Rating Icon"></label>
+            <input type = "radio" id="twoToilet" name="toilets"> 
+          <label for = "threeToilet">  <img class = "toiletIcons" src="toilet.png" alt="Toilet Rating Icon"></label>
+            <input type = "radio" id="threeToilet" name="toilets">
+          <label for = "fourToilet">  <img class = "toiletIcons" src="toilet.png" alt="Toilet Rating Icon"></label>
+            <input type = "radio" id="fourToilet" name="toilets">
+          <label for = "fiveToilet">  <img class = "toiletIcons" src="toilet.png" alt="Toilet Rating Icon"></label>
+            <input type = "radio" id="fiveToilet" name="toilets">
+        </div>
+        <label for = "submit" id="submitButton"> </label>
+            <input type = "submit" value = "submit" name="submit">
+
+      </form>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

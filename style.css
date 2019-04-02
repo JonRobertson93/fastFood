@@ -1,0 +1,36 @@
+#mainForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 50%;
+}
+
+#reviewTextBox {
+  min-width: 300px;
+  min-height: 100px;
+}
+
+input {
+  margin: 0 1em 1em;
+  border: 1px solid gray;
+}
+
+.toiletIcons {
+  height: 20px;
+  width: 20px;
+}
+
+.input_hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+.selected {
+    background-color: #ffe257;
+}
+
+#toiletRatings label {
+    display: inline-block;
+    cursor: pointer;
+}
