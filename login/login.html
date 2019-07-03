@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title> Restroom Rater Login </title>
+    <link href="../style.css" rel="stylesheet">
+    <link href="../responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- FOR SEARCH BAR -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../typeahead.min.js"></script>
+    <!-- EVENTUALLY PUT THIS IN SCRIPT.JS -->
+  </head>
+  <body>
+  	<div id = "container">
+  		<div id="navbar">
+	    	<h1 id = "siteTitle"> <a href="../" alt="Link to restroom rater home"> <i class="fas fa-star"></i> Restroom <span class="golden"> Rater </span> </a></h1>
+				<p class="bigLinks"> <a href="http://jonrobertson.tech/">Portfolio Home</a> </p>
+				<p class="bigLinks"> <a href="#">Sign In/Register</a> </p>
+				<i id="hamburger" class="fas fa-bars"></i>
+				<p class="navLinks hidden"> <a href="http://jonrobertson.tech/">Portfolio Home</a></p>
+				<p class="navLinks hidden"><a href="#">Sign In/Register</a>  </p>
+	    </div>
+	    <div id="innerBox">
+	    	<!-- Left half of screen -->
+	    	<div id="intro">
+	    		<h2> Hi! <br> Login/Register to write your own reviews and manage your past reviews </h2>
+	    	</div>
+	    	<!-- Right half of screen -->
+	    	<div id="buttons">
+	    		<h2 class="loginWelcome"> Sign in to your account </h2>
+	    		<form id="loginForm" action="login.php" method="POST">
+	    			<input type="email" id="email" class="loginInputs" name="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+	    			<input type="password" id="password" class="loginInputs" name="password" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> <!-- 1 number, 1 lowercase, 1 uppercase, minimum 8 characters -->
+
+	    			<input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" class="hidden loginInputs">
+	    			<input type="text" id="username" name="username" placeholder="Username" class="hidden loginInputs">
+	    			<button type="submit" id="loginButton" class="regLoginBtn" alt="login button">Login</button>
+	    			<h2 id="notMemberHeading" class="fullWidth"> Not a member yet? </h2>
+	    			<!-- CHANGE TYPE TO SUBMIT AFTER TESTING JS -->
+	    			<button type="button" id="registerButton" class="regLoginBtn" alt="register button">Register Now</button>
+	    			<button type="submit" id="register" class="regLoginBtn hidden" alt="register sumbission button">Register Now</button>
+	    		</form>
+	    		
+	    	</div>
+	   	</div>
+	    	
+	</div>	<!-- Main container div -->
+    <script src="login.js"></script>
+    <script src="../js/hamburger.js"></script>
+  </body>
+</html>

@@ -6,55 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title> Fast Food Restrooms </title>
+    <title> Restroom Rater </title>
     <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <!-- FOR SEARCH BAR -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="typeahead.min.js"></script>
   </head>
   <body>
-    <h1> Fast Food Restrooms </h1>
-    <h2> Rank Fast Food Restrooms for Needy Travellers Across the US! </h2>
+  	<div id = "container">
+  		<div id="navbar">
+	    	<h1 id = "siteTitle"> <a href="#" alt="Link to restroom rater home"> <i class="fas fa-star"></i> Restroom <span class="golden"> Rater </span> </a></h1>
+				<p class="bigLinks"> <a href="../">Portfolio Home</a> </p>
+				<p class="bigLinks"> <a href="login/login.html">Sign In/Register</a> </p>
+				<i id="hamburger" class="fas fa-bars"></i>
+				<p class="navLinks hidden"> <a href="../">Portfolio Home</a></p>
+				<p class="navLinks hidden"><a href="login/login.html">Sign In/Register</a>  </p>
+	    </div>
+	    <div id="heroImage">
+	    	<div id="allHero">
+		    	<div id="heroText">
+		    		<p id="bannerHeader"> Find clean (or dirty) restrooms with one quick search </p>
+		    	</div>
+		    	<div id = "searchDiv">
+				    <div class="panel panel-default">
+				      <div class="bs-example">
+				          <form class="searchForm" action="php/reviewPage.php" method="POST">
+				            <input type="text" name="typeahead" class="typeahead tt-query" autocomplete="off" spellcheck="false" placeholder="Search Restrooms">
+				            <button id = "searchSubmit" type="submit"> <i class="fas fa-search" id="magButton"> </i></button> 
+				          </form>
+				      </div>
+				    </div>
+				</div>
+				<div id = "leaveReview">
+					<a id="writeReview" href="newReview/reviewForm.html"> Leave a Review </a>
+				</div>
+			</div>
+	    </div>
 
-    <h3> Write a Review </h3>
-    <div id="mainForm">
-      <form id="reviewForm" action="newReview.php" method="POST">
-        <label for = "restaurantName"> Restaurant Name </label>
-          <input type = "text" name = "restaurantName">
-          <br/>
-        <label for = "addressOne"> Address Line 1 </label>
-          <input type = "text" name = "addressOne">
-          <br/>
-        <label for = "addressTwo"> Address Line 2 </label>
-          <input type = "text" name = "addressTwo">
-          <br/>
-        <label for = "city"> City </label>
-          <input type = "text" name = "city">
-          <br/>
-        <label for = "state"> State </label>
-          <input type = "text" name = "state">
-          <br/>
-        <label for = "reviewBox"> Please write your review here: </label>
-        <br/>
-          <textarea id="reviewTextBox" name = "reviewBox"></textarea>
-          <br/>
-        <h3> Rate how many toilets you would give this restaurant: </h3>
-        <div id="toiletRatings">
-          <label for = "oneToilet"> <img class = "toiletIcons" src="toilet.png" alt="Toilet Rating Icon"></label>
-            <input type = "radio" id="oneToilet" name="toilets">
-          <label for = "twoToilet"> <img class = "toiletIcons" src="toilet.png" alt="Toilet Rating Icon"></label>
-            <input type = "radio" id="twoToilet" name="toilets"> 
-          <label for = "threeToilet">  <img class = "toiletIcons" src="toilet.png" alt="Toilet Rating Icon"></label>
-            <input type = "radio" id="threeToilet" name="toilets">
-          <label for = "fourToilet">  <img class = "toiletIcons" src="toilet.png" alt="Toilet Rating Icon"></label>
-            <input type = "radio" id="fourToilet" name="toilets">
-          <label for = "fiveToilet">  <img class = "toiletIcons" src="toilet.png" alt="Toilet Rating Icon"></label>
-            <input type = "radio" id="fiveToilet" name="toilets">
-        </div>
-        <label for = "submit" id="submitButton"> </label>
-            <input type = "submit" value = "submit" name="submit">
-
-      </form>
-    </div>
-
-    <script src="main.js"></script>
+	    <!-- SEARCH BAR GOING HERE -->
+	    	
+	</div>	<!-- Main container div -->
+    <script src="js/main.js"></script>
+    <script src="js/hamburger.js"></script>
   </body>
 </html>

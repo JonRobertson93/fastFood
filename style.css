@@ -1,36 +1,615 @@
-#mainForm {
+body, textarea {
+  font-family: 'Cabin', sans-serif;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: #ffbc00;
+  /* show a hand cursor on hover; some argue that we
+  should keep the default arrow cursor for buttons */
+  cursor: pointer;
+}
+
+#container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* NAVBAR CONTENTS */
+
+#navbar {
+  box-shadow: 1px 0 4px 1px #b5b5b5;  /* maybe not...??? */
+  border-bottom: 1px solid #d3cece;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  padding: 0.5em;
+}
+
+
+.heading {
+  text-align: left;
+  text-indent: 1.3vw;
+}
+
+/* Icon with Title*/
+
+.fa-star {
+  color: #a5a4a4;
+  font-weight: 900;
+  width: 0;
+  margin-right: 1em;
+  font-size: 140%!important;
+}
+
+.selectedStar {
+  color: #ffbc00;
+}
+
+#siteTitle {
+    width: 65%;
+  color: inherit;
+  text-align: left;
+  padding-left: 1em;
+  margin: 0.3em 0;
+}
+
+#siteTitle a:hover {
+  font-size: 102%;
+}
+
+#siteTitle a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#siteTitle .fa-star {
+  font-size: 120%!important;
+  color: #ffbc00!important;
+}
+
+.golden {
+  color: #ffbc00;
+}
+
+.signIn {
+  padding-right: 1em;
+}
+
+.signIn a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.signIn:hover {
+  cursor: pointer;
+  font-size: 110%;
+}
+
+/* HERO/BANNER*/
+
+#allHero {
+    margin-left: 59vw;
+    padding-right: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:  center;
+}
+
+#heroImage {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;    /* for text and search bar*/
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 4em;
+    background-image: url("http://www.organizedmom.net/wp-content/uploads/2017/09/toilet20bowl20and20bathroomcleaner.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#heroText {
+  font-size: 3.2vw;
+}
+
+
+#heroImage img {
+  width: 100%;
+  margin-top: -8em;
+}
+
+
+#searchDiv {
+    width: 100%;
+}
+
+/*SEARCH BAR*/
+
+.tt-query {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+.typeahead {
+  background-color: #FFFFFF;
+}
+
+.typeahead:focus {
+  background: gray;
+}
+
+.typeahead, .tt-query, .tt-hint {
+  //border: 1px solid black;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 8px 40px 8px 9px;
+}
+
+.boldHover {
+  font-weight: bold!important;
+  font-size: 105%!important;
+  cursor: pointer;
+}
+
+.typeahead {
+  background-color: #FFFFFF;
+}
+
+
+
+.tt-dropdown-menu {
+    background: white;
+    border-radius: 8px;
+    width: 93.5%;
+    position: absolute;
+    top: 100%;
+    z-index: 100;
+    display: none;
+    margin: -2% auto auto;
+    padding-left: 1em;
+    text-align: left;
+}
+
+#searchSubmit {
+  border: none;
+  background: none;
+  margin-left:  -42px;
+  position: relative;
+  z-index: 1;
+  top: 16px;
+
+}
+
+
+#magButton {
+  font-size:  150%;
+  color: gray;
+}
+
+#magButton:hover {
+    color: black;
+}
+
+/*DIV*/
+#leaveReview {
+  width: 100%;
+  margin-top: 2em;
+}
+
+/*anchor tag*/
+#writeReview, 
+#submitButton {
+    color: black;
+    text-decoration: none;
+    margin-left: 13px;
+    padding: 1em 6.2em;
+    background: #ffbc00;
+}
+
+#submitButton {
+    margin-left: 0;
+    width: 100%;
+}
+
+#writeReview:hover,
+#submitButton:hover {
+  cursor: pointer;
+  font-size: 103%;
+  background: #ffb200;
+}
+
+/*
+:)
+:D
+;)
+*/
+
+/*LOGIN PAGE*/
+#innerBox {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 5em;
+    padding: 4em;
+    padding-top: 9em;
+    min-height: 800px;
+    color: black;
+    max-width: 1200px;
+
+}
+
+#intro, #buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  padding: 1em;
+  max-height: 400px;
+  justify-content: center;
+
+}
+
+#intro {
+  font-size: 150%;
+}
+
+#buttons {
+
+}
+
+.loginWelcome {
+  font-size: 130%;
+  width: 100%;
+  margin-bottom: -1.8em;
+}
+
+/*LOGIN FORM*/
+
+#loginForm {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginInputs, .regLoginBtn{
+    margin: auto;
+    padding: 1em;
+    border: 1px solid black;
+    width: 300px;
+}
+
+.regLoginBtn {
+  box-sizing: content-box;
+  border: none;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-indent: none;
+}
+
+.regLoginBtn:active {
+  transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+.regLoginBtn:hover,
+.regLoginBtn:hover {
+  cursor: pointer;
+  background: #ffa700;
+}
+
+/* REGISTER - PART OF LOGIN PAGE*/
+
+
+/*WRITE A REVIEW*/
+.star {
+  color: red;
+}
+
+#asterixText {
+  margin-top: -1em;
+}
+
+#mainForm {
+    background: white;
+    padding: 2em 5em 1em 5em;
+    padding-top: 2em;
+    margin: 10em 0em;
+}
+
+#reviewForm {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+#rightDiv, #rightSide, #leftDiv {
+    width: 45%;
+    margin: auto;
+}
+
+
+#rightDiv {
+  margin-top: -18px;
+}
+
+#reviewForm input, textarea, select {
+    margin-top: 0.3em;
+    margin-bottom: 2em;
+    text-decoration: none;
+    border: 1px solid gray;
+    padding: 0.6em 0;
+    text-indent: 5px;
+    font-size: 90%;
+}
+
+#reviewHeading, #reviewTextBox {
+    margin-bottom: 1.2em;
+}
+
+input:focus, textarea:focus, select:focus {
+  border: 2px solid #ffbc00;
+}
+
+
+/*DIV*/
+#cityStateZipLabels {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: left;
+    justify-content: space-between;
+}
+
+#cityStateZipInputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#stateSelect {
+  color: black;
+  background: white;
+}
+
+#stateSelect:hover {
+  cursor: pointer;
+}
+
+#reviewHeading {
+  width: 99%;
+}
+
+textarea {
+  width: 97%;
+  padding-left: 0.5em;
+  min-height: 5.5em;
+  resize: none; 
+  font-size: 100%!important;
+}
+
+#toiletRatings {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  height: 3.5em;
+}
+
+
+/* STARS CSS */
+.fa-star:hover {
+  cursor: pointer;
+}
+
+#toiletText {
+  width: 74%;
+}
+
+
+#fiveStars {
+  margin-top: 4px;
+}
+
+
+#submitDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+
+/*REVIEWS PAGE*/
+
+
+table {
+  padding: 35px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #cccccc;
+  margin: 10px;
+}
+
+tbody {
+  text-align: left;
+}
+
+
+
+.fullWidth {
+  width: 100%;
+}
+
+.halfWidth {
   width: 50%;
 }
 
-#reviewTextBox {
-  min-width: 300px;
-  min-height: 100px;
+.thirdWidth {
+  width: calc(100%/3);
 }
 
-input {
-  margin: 0 1em 1em;
-  border: 1px solid gray;
+.twelveWidth {
+  width: 12%;
 }
 
-.toiletIcons {
-  height: 20px;
-  width: 20px;
+.sixteenWidth {
+  width: 16%;
 }
 
-.input_hidden {
-    position: absolute;
-    left: -9999px;
+.twentyWidth {
+  width: 20%;
 }
 
-.selected {
-    background-color: #ffe257;
+.twentyTwoWidth {
+  width: 22%;
 }
 
-#toiletRatings label {
-    display: inline-block;
+.thirtyWidth {
+  width: 30%;
+}
+
+.fortyWidth {
+  width: 40%;
+}
+
+.fortyFiveWidth {
+  width: 45%;
+}
+
+.marginRightTwo {
+  margin-right: 2%;
+}
+
+.threePad {
+  padding: 3px;
+}
+
+
+
+#reviewsDiv {
+    max-width: 900px;
+  margin: 10em 3em;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.reviewHeading {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.reviewText {
+  font-size: 110%;
+  padding: 10px;
+  padding-left: 0;
+  text-indent: 1em;
+}
+
+.fa-thumbs-up,
+.fa-thumbs-down {
+    font-weight: 200!important;
+    font-size: 156%;
+    padding-left: 0.5em;
+}
+
+.fa-thumbs-up:hover,
+.fa-thumbs-down:hover {
     cursor: pointer;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.indent {
+    text-indent: 1em;
+}
+
+/* UNDER CONSTRUCTION PAGE*/
+
+#underConstruction {
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content:  center;
+    margin-top: 100px;
+    width: 100%;
+}
+
+#returnHome {
+  color: #1349c8;
+  font-size: 135%;
+  font-weight:  bold;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+
+#returnHome: hover {
+  cursor:pointer;
+}
+
+#constructionImg {
+    height: auto;
+    margin: auto;
+    max-width: 100%;
+}
+
+
+/* MOBILE STYLE TESTING HERE */
+#hamburger {
+    display: none;
+    font-size: 165%;
+    padding-right: 1em;
+}
+
+#hamburger:hover {
+  cursor: pointer;
+}
+
+.navLinks {
+  width: 100%;
+  text-align: left;
+  text-indent: 1em;
+}
+
+.bigLinks {
+  width: 15%;
+}
+
+.navLinks:hover,
+.bigLinks:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    font-size: 105%;
 }

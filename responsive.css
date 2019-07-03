@@ -1,0 +1,155 @@
+@media screen and (max-width: 500px) {
+    /* INDEX.HTML */
+    
+    #hamburger {
+        display: block;
+    }
+    
+    .bigLinks {
+        display: none;
+    }
+    
+    #siteTitle {
+        padding-left: 5px;
+        font-size: 175%;
+        width: 70%;
+    }
+    
+    .signIn {
+        font-size: 120%;
+        font-weight: bold;
+    }
+    
+    #heroImage {
+        margin-top: 3em;
+        background-image: none;
+        background: white;
+        background: linear-gradient(0deg, rgba(0,0,0,0.7402311266303396) 10%, rgba(234,234,234,0.5329482134650736) 100%);
+        align-items: self-start;
+    }
+    
+    #heroText {
+        font-size: 241%;
+        width: 90%;
+    }
+    
+    #allHero {
+        margin-left: 0;
+        padding-right: 0;
+    }
+    
+    #writeReview, #submitButton {
+        padding: 1em 6.9em;
+    }
+    
+    
+    
+    /* REVIEWPAGE.PHP */
+    
+    #reviewsDiv {
+        width: 95%;
+        margin: 0;
+        margin-top: 3em;
+        text-align: center;
+    }
+    
+    table {
+        padding: 1px;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 2em;
+        border: none;
+    }
+    
+    /* REVIEWFORM.HTML */
+    #mainForm {
+        margin: 2em 0;
+        padding: 1.5em;
+    }
+    
+    #rightDiv, #rightSide, #leftDiv {
+        width: 100%;
+    }
+    
+    /* LOGIN.HTML */
+    #intro {
+        font-size: 110%;
+        width: 100%;
+    }
+    
+    #intro, #buttons {
+        width: 95%;
+    }
+    
+    #innerBox {
+        min-height: 0;
+        margin-top: 2.5em;
+        padding: 4em;
+        padding-top: 0;
+    }
+    
+    .loginWelcome {
+        margin-bottom: 17px;
+    }
+    
+    .loginInputs {
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+    /* INDEX.HTML */
+    #heroText {
+        font-size: 5vw;
+        width: 85%;
+    }
+    #allHero {
+        margin-left: 37vw;
+    }
+    /* LOGIN.HTML */
+    .loginWelcome {
+        margin-bottom: -0.5em;
+    }
+    
+    #intro, #buttons {
+        width: 75%;
+    }
+    
+    #intro {
+        font-size: 115%;
+    }
+    
+    /* REVIEWFORM.HTML */
+    #mainForm {
+        margin-top: 5em;
+        padding: 1.5em;
+    }
+    
+    .heading {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 1em;
+        text-indent: 0;
+    }
+    
+    #rightDiv, #rightSide, #leftDiv {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+  #siteTitle {
+    width: 58%;
+    font-size: 165%;
+  }
+  
+  #heroImage {
+      margin-top: 5em;
+  }
+}
+
+
+
+
+
